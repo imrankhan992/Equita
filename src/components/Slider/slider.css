@@ -1,0 +1,126 @@
+
+ 
+
+  
+  .swiper {
+    width: 100%;
+    height: 80vh;
+  }
+  
+  @media (max-width:47.875em){
+    .swiper {
+      height: 100vh;
+    }
+  
+    
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .slider-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .slider-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    color: var(--clr-neutral-900);
+  }
+  .slider-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--clr-neutral-900);
+    text-align: start;
+   
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    
+  }
+
+  .slider-content h1{
+    font-size: var(--fs-1000);
+    text-transform: capitalize;
+    font-weight: var(--fw-semi-bold);
+    font-family: "Rubik", sans-serif;
+     width: 15ch;
+     line-height: 1.2;
+  }
+  .slider-container span{
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    
+    color: var(--clr-neutral-900);
+  }
+  .slider-container p{
+    font-size: var(--fs-650);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-900);
+    width: 69ch;
+
+  }
+  .sliders-buttons{
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  @media (max-width: 47.938em) {
+    .slider-content {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      align-items: center;
+      text-align: center;
+      width: 90%; /* Adjust width for better mobile fit */
+      display: flex;
+      flex-direction: column;
+      gap:2rem;
+    }
+    .sliders-buttons{
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+  
+    .slider-content h1 {
+      font-size: var(--fs-720);
+      width: 15ch; /* Adjust width for mobile */
+    }
+  
+    .slider-content p {
+      width: auto; /* Adjust width for better readability */
+    }
+  }
+  
