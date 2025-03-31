@@ -6,11 +6,11 @@
 
   --clr-primary-400: hsl(228, 39%, 23%);
 
-  --clr-neutral-100: hsl(240, 8%, 3%);
+  --clr-neutral-100: #1b1a1a;
   --clr-neutral-900: #ffffff;
   /* font families */
   --font-family-primary:  "Roboto", sans-serif;
-  --ff-body: var(--font-family-primary);
+--ff-body: var(--font-family-primary);
   /* font family heading */
   --ff-accent: var(--font-family-primary);
 
@@ -27,8 +27,11 @@
   --fs-600:1rem; /* 16px */
   --fs-650:1.063rem; /* 17px */
   --fs-660:1.125rem; /* 18px */
-  --fs-700:1.875rem; /* 30px */
-  --fs-720:2rem; /* 32px */
+  --fs-700:1.875rem; /* 30px */ 
+   --fs-730:1.5rem; /* 24px */
+  --fs-720:2rem; /* 32px */ 
+  --fs-750:2.125rem; /* 34px */
+  
   --fs-780:2.375rem; /* 38px */
   --fs-800:2.5rem; /* 40px */
   --fs-850:2.688rem; /* 43px */
@@ -243,6 +246,7 @@ body{
   font-size: var(--fs-body);
   font-family: var(--ff-body);
   color: var(--neutral-100);
+  background-color: #f9f9f9;
 }
 .button-red {
   background-color: var(--clr-accent-400);
@@ -273,8 +277,26 @@ body{
   border: none;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
 /* Hover Effect */
 .button-black:hover {
+  background-color:  var(--clr-accent-400);
+  color: white;
+}
+
+.button-black-to-red {
+  background-color:var(--clr-neutral-100); 
+  color: var(--clr-neutral-900); 
+  padding: 0.9rem 2rem;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+  text-transform: capitalize;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 100%;
+}
+.button-black-to-red:hover {
   background-color:  var(--clr-accent-400);
   color: white;
 }
