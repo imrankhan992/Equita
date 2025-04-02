@@ -48,7 +48,7 @@ const Cta = () => {
                   src={payment_terminal_icon}
                   alt="payment icon"
                 />
-                <figcaption>Transparent Pricing</figcaption>
+                <figcaption className="fig_caption">Transparent Pricing</figcaption>
               </figure>
             </div>
             <figure>
@@ -58,7 +58,7 @@ const Cta = () => {
                 src={package_icon}
                 alt="This is box package icon"
               />
-              <figcaption>Fast, Efficient Delivery</figcaption>
+              <figcaption className="fig_caption">Fast, Efficient Delivery</figcaption>
             </figure>
             <figure>
               <img
@@ -67,7 +67,7 @@ const Cta = () => {
                 src={scale_machine_icon}
                 alt="Weighing-machine.png"
               />
-              <figcaption>Warehouse Storage</figcaption>
+              <figcaption className="fig_caption">Warehouse Storage</figcaption>
             </figure>
           </div>
         </div>

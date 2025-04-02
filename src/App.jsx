@@ -5,6 +5,9 @@ import Logistic from "./components/Logistic/Logistic";
 import Cta from "./components/CTA/Cta";
 import Quality from "./components/Quality/Quality";
 import Companies from "./components/Companies/Companies";
+import Articles from "./components/Articles/Articles";
+import Plan from "./components/Plans/Plan";
+import Trends from "./components/Trends/Trends";
 
 function App() {
  
@@ -21,8 +24,9 @@ function App() {
           <Cta />
           {/* <Companies /> */}
           <Quality/>
-
-    
+          <Articles/>
+<Plan/>
+    <Trends/>
      
       
     
