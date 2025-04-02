@@ -156,10 +156,10 @@ const categories = [
 
 export default function Cta_Tabs() {
   return (
-    <div className="cta_tab_container">
-      <div className="cta_tab_content">
+    <div className="cta_tab_container container">
+      <div className="cta_tab_content ">
         <TabGroup>
-          <TabList className="cta_tab">
+          <TabList className="cta_tab container container">
             {categories.map(({ alt, img, name }) => (
               <Tab
                 key={name}
@@ -175,7 +175,7 @@ export default function Cta_Tabs() {
           </TabList>
 
           {/* Tab Panels */}
-          <TabPanels className="panel__container">
+          <TabPanels className="panel__container container">
             {categories.map(({ name, component }) => (
               <TabPanel key={name} className="p-4 bg-gray-200 rounded-lg">
                 {component}

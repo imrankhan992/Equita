@@ -1,6 +1,8 @@
 .companies{
     margin-top: 4rem;
     background-color: #f9f9f9;
+   
+    margin-top:30rem ;
 }
 .companies__container{
     display: grid;
@@ -94,6 +96,12 @@
         width: 80%;
         margin-inline: auto;
     }
+    .companies{
+        margin-top: 4rem;
+        background-color: #f9f9f9;
+      
+        margin-top:2rem ;
+    }
     .company__btn__container{
         display: flex;
         
@@ -119,3 +127,9 @@
     }
    
   }
+
+
+
+  /* cards */
+
+  
