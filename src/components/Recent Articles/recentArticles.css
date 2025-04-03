@@ -1,0 +1,173 @@
+.slider_container{
+    background-color: var(--clr-neutral-900) !important;
+}
+.recent-articles_section{
+    background-color: var(--clr-neutral-900) !important;
+    padding-block: 4rem !important;
+}
+.recent-articles_container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    width:21.875rem !important;
+   
+}
+.recent-articles_main{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20.125rem, 1fr));
+  gap: 2rem;
+  grid-auto-rows: auto;
+  width: 100%;
+align-items: center;
+justify-content: center;
+
+margin-inline: auto;
+  cursor: pointer;
+}
+.recent-articles_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.recent-articles_content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-inline: 1.7rem;
+    padding-bottom: 2rem;
+    
+    
+}
+
+.recent-articles_content span{
+    font-size: var(--fs-300);
+    color: var(--clr-accent-400);
+}
+.recent-articles_content h3{
+    font-size: var(--fs-660);
+    color: var(--clr-neutral-100);
+    font-family: "Rubik", sans-serif;
+    font-weight: var(--fw-semi-bold);
+    text-transform: capitalize;
+}
+.date{
+    font-size: var(--fs-300) !important;
+    color: var(--clr-accent-100) !important;
+    margin-bottom: 1rem;
+}
+.recent-articles_content p{
+    font-size: var(--fs-500) !important;
+    color: var(--clr-accent-100) !important;
+    font-weight: var(--fw-regular);
+    line-height: 1.7;
+}
+.recent-articles_content a{
+    font-size: var(--fs-400);
+    color: var(--clr-neutral-100) !important;
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+
+}
+.heading-desc{
+    color: var(--clr-accent-100) !important;
+    
+}
+ @media (max-width:50em){
+    
+}
+    @media (max-width:60em){
+        .recent-articles_container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            
+        
+           
+        }
+        .heading-desc{
+            padding-inline: 2rem;
+            font-size: var(--fs-300);
+        }
+        .recent-articles_main{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            
+        }
+        
+    }
+
+
+
+    .recent-articles_content a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: var(--fs-400);
+        color: var(--clr-neutral-100) !important;
+        text-decoration: none;
+        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+       
+    }
+    
+    /* Ensure space for the arrow even when hidden */
+    .recent-articles_content a::before {
+        content: "⇒"; /* Keep arrow always present */
+        opacity: 0; /* Hide it initially */
+        font-size: 1.5rem;
+        font-weight: bold;
+        transform: translateX(-10px);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+        display: none;
+    }
+    
+    /* Image scale effect */
+    .recent-articles_img_container {
+        overflow: hidden !important;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+    }
+    
+    .recent-articles_img_container img {
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .recent-articles_container:hover .recent-articles_img_container img {
+        transform: scale(1.08);
+    }
+    
+    /* Hover effect */
+    .recent-articles_container:hover .recent-articles_content a {
+        color: red !important;
+        transform: translateX(5px);
+    }
+    
+    /* Reveal arrow smoothly */
+    .recent-articles_container:hover .recent-articles_content a::before {
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out;
+        display: block;
+    }
+    
+    /* Reverse animation smoothly */
+    .recent-articles_container:not(:hover) .recent-articles_content a {
+        color: var(--clr-neutral-100) !important;
+        transform: translateX(0);
+    }
+    
+    .recent-articles_container:not(:hover) .recent-articles_content a::before {
+        opacity: 0;
+        transform: translateX(-10px);
+        visibility: hidden;
+    }
+    

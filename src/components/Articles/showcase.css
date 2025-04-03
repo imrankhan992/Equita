@@ -33,10 +33,10 @@
   @media (max-width:53.375rem) {
     .para_showcase{
       width: 100%;
-      padding-inline: 30rem;
+      padding-inline: 23rem;
     }
     .heading-title{
-      font-size: var(--fs-730);
+      font-size: var(--fs-730) !important;
     }
   }
   .show_Case_slider_item{
@@ -47,6 +47,6 @@
   @media (max-width:29.5em) {
     .para_showcase{
       width: 100%;
-      padding-inline: 35rem;
+      padding-inline: 23rem;
     }
   }

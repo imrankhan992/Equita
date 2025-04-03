@@ -105,7 +105,8 @@ const Quality = () => {
             <img
               src="https://demo.zytheme.com/equita/assets/images/cta/2.jpg"
               alt=""
-             
+             width={690}
+             height={460}
             />
           </div>
           <div className="quality__images_right">
@@ -148,6 +149,8 @@ const Quality = () => {
             <img
               src="https://demo.zytheme.com/equita/assets/images/cta/3.jpg"
               alt=""
+              width={690}
+              height={460}
             />
           </div>
         </div>

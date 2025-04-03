@@ -11,7 +11,8 @@ import './noteslider.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
-import Star from '../../assets/images/svgs/svgs';
+import { Star } from '../../assets/images/svgs/svgs';
+
 
 export default function NoteSlider() {
   return (
@@ -33,36 +34,37 @@ export default function NoteSlider() {
 >
   <SwiperSlide className="Note_slider_item">
     <div className="note_slider_item">
-      <div className="note_slider_item_content">
-        <div className="review_profile_container">
-          <div className="review_profile">
-            <img
-              className="image_user"
-              width={60}
-              height={60}
-              src="https://demo.zytheme.com/equita/assets/images/testimonial/3.jpg"
-              alt="profile"
-            />
-          </div>
-        </div>
-        <div className="review_content">
-          <div className="review_star">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-          </div>
-          <div>
-            <p className="note_slider_p">
-              Equita Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.
-            </p>
-            <div className="testimonial-meta">
-              <h4>John R Peter</h4>
-              <p>movein</p>
-            </div>
-          </div>
-        </div>
+    <div className="note_slider_item_content">
+  <div className="review_profile_container">
+    <div className="review_profile">
+      <img
+        className="image_user"
+        width={60}
+        height={60}
+        src="https://demo.zytheme.com/equita/assets/images/testimonial/3.jpg"
+        alt="profile"
+      />
+    </div>
+  </div>
+  <div className="review_content">
+    <div className="review_star">
+      <Star />
+      <Star />
+      <Star />
+      <Star />
+    </div>
+    <div>
+      <p className="note_slider_p">
+        Equita Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.
+      </p>
+      <div className="testimonial-meta">
+        <h4>John R Peter</h4>
+        <p>movein</p>
       </div>
+    </div>
+  </div>
+</div>
+
     </div>
   </SwiperSlide>
 

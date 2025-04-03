@@ -122,6 +122,10 @@
         flex-direction: column;
         padding-top: 20rem;
     }
+    .head_showcase{
+        font-size: var(--fs-730) !important;
+       
+    }
 }
 
 @media (max-width:66.5em) {

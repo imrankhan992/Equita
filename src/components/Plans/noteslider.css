@@ -24,6 +24,21 @@ width: 33.75rem;
     padding-block: 3rem;
     padding-inline: 2rem;
     border-radius: 0.2rem;
+    position: relative;
+   
+}
+/* Chat Arrow */
+
+.note_slider_item_content::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    right: 20px;
+    width: 0;
+    height: 16px;
+    border-left: 25px solid transparent;
+    border-right: -1px solid transparent;
+    border-top: 13px solid white;
 }
 .review_profile{
     width: 68px !important;
@@ -129,6 +144,7 @@ width: 33.75rem;
         justify-content: space-between;
         align-items: center;
         gap: 1rem;
+       
     }
     .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets{
  
