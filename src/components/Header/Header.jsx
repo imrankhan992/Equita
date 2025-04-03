@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./header.css";
 import logo from "../../assets/images/logo/logo-light.png";
 import logo_dark from "../../assets/images/logo/logo-dark.png";
@@ -7,27 +7,50 @@ import { Toggle } from "./Toggle";
 
 
 export const Header = () => {
+    // State to track the scroll position
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    // Effect to monitor scroll event
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 50) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false); 
+        }
+      };
+  
+      // Attach scroll event listener
+      window.addEventListener("scroll", handleScroll);
+  
+      // Clean up event listener on component unmount
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
   return (
-    <header className="header-secion">
+    <header className={`header-secion ${isScrolled ? "scrolled" : "imran"}`}>
       <nav className="nav-container container">
         {/* Logo */}
         <picture className="logo-container">
           <source  media="(max-width: 64.938rem)"  srcset={logo_dark} type="" />
           <img src={logo} alt="Logo" width={120} height={39} />
         </picture>
+        <picture className="scroll_container">
+          <source  media="(max-width: 64.938rem)"  srcset={logo} type="" />
+          <img src={logo_dark} alt="Logo" width={120} height={39} />
+        </picture>
 
         {/* Right Side Menu */}
         <div className="menu-container">
           <div className="navbar">
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
+            <a href="#home" className="scrolled_text">Home</a>
+            <a href="#news" className="scrolled_text">News</a>
 
             <div className="dropdown">
               <button className="dropbtn">Company</button>
               <div className="dropdown-content">
-                <a href="#">About Us</a>
-                <a href="#">Careers</a>
-                <a href="#">Our Team</a>
+                <a href="#" >About Us</a>
+                <a href="#" >Careers</a>
+                <a href="#" >Our Team</a>
                 <div className="border-dropdown-content " ></div>
               </div>
             </div>

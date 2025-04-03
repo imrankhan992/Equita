@@ -77,6 +77,11 @@
     
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   }
+  .icon_sizes{
+    width: 15rem;
+    height: 20rem;
+    color: var(--clr-accent-400);
+  }
   
   /* Hover Effect */
   .company-btn:hover {

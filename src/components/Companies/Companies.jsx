@@ -1,6 +1,7 @@
 import React from "react";
 import "./companies.css";
 import Cards from "./Cards";
+import { faPlaneUp,faShip ,faTrailer} from "@fortawesome/free-solid-svg-icons";
 const Companies = () => {
   return (
     <section className="spacing-y companies container">
@@ -40,9 +41,9 @@ const Companies = () => {
       {/* cards of comapnies */}
 
       <div className="company__cards_container ">
-        <Cards />
-        <Cards />
-        <Cards />
+        <Cards icon={faPlaneUp}/>
+        <Cards icon={faShip} />
+        <Cards icon={faTrailer} />
       </div>
       <p className="company_advertise">
         Logistic &amp; Transport Solutions Saves Your Time.{" "}

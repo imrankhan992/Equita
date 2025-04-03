@@ -3,10 +3,10 @@ import "./mapbox.css";
 import { Envelop, Location, Phone } from "../../assets/images/svgs/svgs";
 
 export default function MapBox() {
-  const [open, setOpen] = useState(null); // This will store which disclosure is open
+  const [open, setOpen] = useState(1); 
 
   const toggleDisclosure = (index) => {
-    setOpen(open === index ? null : index); // Toggle between opening and closing the current disclosure
+    setOpen(open === index ? null : index); 
   };
 
   return (

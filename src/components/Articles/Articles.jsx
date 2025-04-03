@@ -24,7 +24,7 @@ const Articles = () => {
                     <p className='para_showcase'>Our skilled personnel, utilising the latest communications, tracking and processing software, combined with decades of experience! Through integrated supply chain solutions, Equita drives sustainable competitive advantages to some of Australia's largest companies.</p>
                 </div>
                 {/* show case slider */}
-                <div className='container'>
+                <div className='container show_case_slider_spacing'>
                 <ShowCaseSlider />
                 </div>
               </div>

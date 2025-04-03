@@ -4,11 +4,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
- 
+    background-attachment: scroll;
   width: 100%;
 
 }
-
+.show_case_slider_spacing{
+    padding-bottom: 5rem;
+}
 
 .articles_main{
     display: flex;
@@ -16,7 +18,7 @@
     align-items: center;
     /* height: 100vh; */
     flex-direction: column;
-    padding-top: 22rem;
+    padding-top: 25rem;
 }
 
 .heading-subtitle{

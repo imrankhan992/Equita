@@ -8,6 +8,7 @@ import Articles from "./components/Articles/Articles";
 import Plan from "./components/Plans/Plan";
 import RecentArticles from "./components/Recent Articles/RecentArticles";
 import Map from "./components/Map/Map";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
      
       <RecentArticles />
       <Map/>
+      <Footer/>
     </>
   );
 }

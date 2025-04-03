@@ -103,10 +103,10 @@ width: 33.75rem;
 
 .custom-pagination {
     display: flex;
-    justify-content: start !important;
-    align-items: start !important;
+    justify-content: start ;
+    align-items: start ;
     margin-top: 15px;
-    background-color: aliceblue !important;
+    background-color: aliceblue ;
    
   }
   
@@ -127,6 +127,7 @@ width: 33.75rem;
   .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets{
  
    display: flex;
+   margin-bottom: 0 ;
    
   }
 

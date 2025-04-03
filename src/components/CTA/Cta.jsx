@@ -33,7 +33,7 @@ const Cta = () => {
             <p className="heading-subtitle">
               Dedicated Customer Teams &amp; An Agile Services
             </p>
-            <h2 className="heading-title">
+            <h2 className="heading-title_cta">
               Global Logistics Partner To World’s Famous Brands For Over 25
               Years!
             </h2>

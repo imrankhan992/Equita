@@ -120,6 +120,7 @@
   font-weight: var(--fw-bold);
   border-radius: 0.2rem;
 }
+/* Initially, the header is transparent */
 .header-secion {
   position: fixed;
   top: 0;
@@ -127,7 +128,17 @@
   right: 0;
   z-index: 1000;
   background-color: transparent;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* When scrolled, the header becomes white with a small animation */
+.scrolled {
+  background-color: white;
+  transform: translateY(-5px); /* Animation effect */
+  border-bottom: 1px solid gray; /* Border when scrolled */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: box-shadow for more emphasis */
+  color: black;
 }
 
 .end-buttons {
@@ -201,4 +212,19 @@
   .header-secion {
     background-color: white;
   }
+}
+
+
+.scrolled .nav-container .menu-container .navbar .scrolled_text ,.scrolled .nav-container .menu-container .navbar .dropdown .dropbtn {
+  color: black !important;
+}
+.scrolled .logo-container {
+  display: none;
+}
+
+.scrolled .scroll_container{
+  display: block;
+}
+.imran .scroll_container{
+  display: none;
 }

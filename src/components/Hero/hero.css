@@ -158,18 +158,22 @@ line-height: 1.2;
         }
  
 
-        .hero-card-container-bg,.active{
-            background-color: var(--clr-accent-400);
-            color:  var(--clr-neutral-900);
-        }
         
-       
-        
-        .hero-card-group:hover .hero-card-container {
-            background-color: var(--clr-accent-400); /* Change background on hover */
-            color:  var(--clr-neutral-900); /* Change text color on hover */
-        }
-        .acive-svg, .active{
-            background-color: var(--clr-accent-400);
-            color:  var(--clr-neutral-900);
-        }
+        .hero-card-container:hover .icon_color {
+    color: white; /* Change icon color to white when hero-card-container is hovered */
+}
+
+.hero-card-container:hover .hero-card-text {
+    color: white; /* Change text color to white when hero-card-container is hovered */
+}
+
+.hero-card-text span, .hero-card-text h3 {
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.icon_color {
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+.sub_head{
+    color: var(--clr-accent-100);
+}
