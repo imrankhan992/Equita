@@ -2,6 +2,7 @@ import React from "react";
 import "./articles.css";
 import ShowCaseSlider from "./ShowCaseSlider";
 import PartnetsSliders from "./SliderPartners";
+import { ArticlesHeadings, ShowcaseHeadings } from "../Branding";
 
 const Articles = ({
   subtitle,
@@ -28,21 +29,18 @@ const Articles = ({
   return (
     <div className="container articles_section">
       <div className="articles_main">
-        <div className="articles_container">
-          <p className="heading-subtitle">{subtitle}</p>
-          <h2 className="heading-title">{title}</h2>
-        </div>
+        <ArticlesHeadings subtitle={subtitle} title={title} />
+
         <div className="slider_aricles container">
           <PartnetsSliders items={sliderItems} />
         </div>
+
         <div>
-          <div className="show_case_container container">
-            <div className="show_case_head">
-              <span className="sub_head_showcase">{showcaseSubtitle}</span>
-              <h2 className="head_showcase">{showcaseTitle}</h2>
-            </div>
-            <p className="para_showcase">{showcaseText}</p>
-          </div>
+          <ShowcaseHeadings
+            subtitle={showcaseSubtitle}
+            title={showcaseTitle}
+            text={showcaseText}
+          />
           <div className="container show_case_slider_spacing">
             <ShowCaseSlider logos={partnerLogos} />
           </div>

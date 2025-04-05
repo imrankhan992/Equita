@@ -220,7 +220,7 @@
 }
 
 
-.scrolled .nav-container .menu-container .navbar .scrolled_text ,.scrolled .nav-container .menu-container .navbar .dropdown .dropbtn  , .scrolled .nav-container .end-buttons .dropdown .dropbtn{
+.scrolled .nav-container .menu-container .navbar .scrolled_text , .scrolled .nav-container .menu-container .navbar .dropdown .dropbtn  , .scrolled .nav-container .navbar a , .scrolled .nav-container .menu-container .end-buttons .dropdown .dropbtn {
   color: black !important;
 }
 .scrolled .logo-container {

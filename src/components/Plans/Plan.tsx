@@ -1,6 +1,12 @@
 import React from "react";
 import "./plan.css";
 import NoteSlider from "./NodeSlider";
+import {
+  PlanSubtitle,
+  PlanTitle,
+  PlanDescription,
+  PlanButton,
+} from "../Branding";
 
 export interface Testimonial {
   image: string;
@@ -30,17 +36,10 @@ const Plan: React.FC<PlanProps> = ({
       <div className="overlay-red"></div>
       <div className="container plan-index plan_section_main">
         <div className="plan_section_left">
-          <p className="heading-subtitle_plan">{subtitle}</p>
-          <h2 className="heading_title">
-            {title.split("\n").map((line, idx) => (
-              <React.Fragment key={idx}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </h2>
-          <p className="heading-desc">{description}</p>
-          <a className="btn--inverse">{buttonLabel}</a>
+          <PlanSubtitle subtitle={subtitle} />
+          <PlanTitle title={title} />
+          <PlanDescription description={description} />
+          <PlanButton label={buttonLabel} />
         </div>
 
         <NoteSlider testimonials={testimonials} />

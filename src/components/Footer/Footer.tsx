@@ -1,13 +1,17 @@
 import React from "react";
 import "./footer.css";
+import {
+  FooterHeading,
+  FooterDescription,
+  FooterCopyright,
+  NewsletterDescription,
+  NewsletterInput,
+  NewsletterButton,
+} from "../Branding";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { Phone } from "../../assets/images/svgs/svgs";
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+
 interface Social {
   icon: IconDefinition;
   link: string;
@@ -56,17 +60,10 @@ const Footer: React.FC<FooterProps> = ({
           </div>
           <div className="col-12 col-lg-9 col-xl-8">
             <div className="widget-content">
-              <p>{newsletter.description}</p>
+              <NewsletterDescription description={newsletter.description} />
               <form className="form-newsletter mailchimp" noValidate>
-                <input
-                  className="form-control"
-                  type="email"
-                  name="EMAIL"
-                  placeholder={newsletter.placeholder}
-                />
-                <button className="btn btn--primary" type="submit">
-                  {newsletter.buttonText}
-                </button>
+                <NewsletterInput placeholder={newsletter.placeholder} />
+                <NewsletterButton label={newsletter.buttonText} />
               </form>
             </div>
           </div>
@@ -78,36 +75,26 @@ const Footer: React.FC<FooterProps> = ({
           <div className="footer_section2_content">
             {/* About + Socials */}
             <div className="footer_section2_content1">
-              <h3 className="footer-heading">Equita</h3>
-              <p className="intro_p">
-                Equita is a leading independent investment bank in Italy...
-              </p>
+              <FooterHeading heading="Equita" />
+              <FooterDescription description="Equita is a leading independent investment bank in Italy..." />
               <div className="social_icon">
-                <FontAwesomeIcon
-                  icon={faFacebookF}
-                  size="2xl"
-                  fill="#fff"
-                  className="icon_group"
-                />
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  size="2xl"
-                  fill="#fff"
-                  className="icon_group"
-                />
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  size="2xl"
-                  fill="#fff"
-                  className="icon_group"
-                />
+                {socials.map((social, idx) => (
+                  <a key={idx} href={social.link} target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon
+                      icon={social.icon}
+                      size="2xl"
+                      fill="#fff"
+                      className="icon_group"
+                    />
+                  </a>
+                ))}
               </div>
             </div>
 
             {/* Link Groups */}
             {linkGroups.map((group, idx) => (
               <div className="footer_section2_content1" key={idx}>
-                <h3 className="footer-heading">{group.title}</h3>
+                <FooterHeading heading={group.title} />
                 <ul className="footer_section2_content1_list">
                   {group.links.map((link, linkIdx) => (
                     <li key={linkIdx}>
@@ -120,7 +107,7 @@ const Footer: React.FC<FooterProps> = ({
 
             {/* Quick Contact */}
             <div className="footer_section2_content1">
-              <h3 className="footer-heading">Quick Contact</h3>
+              <FooterHeading heading="Quick Contact" />
               <ul className="footer_section2_content1_list quick_chat">
                 <li>
                   <span className="quick_p">{quickContact.message}</span>
@@ -139,7 +126,7 @@ const Footer: React.FC<FooterProps> = ({
         </div>
 
         <div className="container copy_right">
-          <p>{copyright}</p>
+          <FooterCopyright text={copyright} />
         </div>
       </footer>
     </>

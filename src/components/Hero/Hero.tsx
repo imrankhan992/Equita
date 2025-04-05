@@ -1,7 +1,7 @@
 import React from "react";
 import "./hero.css";
 import HeroSlider from "../Slider/Slider";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { HeroCard } from "../Branding";
 
 
 const Hero = ({
@@ -23,25 +23,14 @@ const Hero = ({
         <HeroSlider slides={sliderContent} />
         <div className="container hero-cards">
           {cards.map((card, index) => (
-            <div
+            <HeroCard
               key={index}
-              className={`hero-card-container group ${
-                card.active ? "active" : ""
-              }`}
-            >
-              <div>
-                <FontAwesomeIcon
-                  icon={card.icon}
-                  size="4x"
-                  color={card.color}
-                  className={card.color ? "icon_color" : ""}
-                />
-              </div>
-              <div className="hero-card-text group-hover:text-white">
-                <span className="sub_head">{card.subtitle}</span>
-                <h3>{card.title}</h3>
-              </div>
-            </div>
+              icon={card.icon}
+              title={card.title}
+              subtitle={card.subtitle}
+              color={card.color}
+              active={card.active}
+            />
           ))}
         </div>
       </div>

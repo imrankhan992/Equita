@@ -46,33 +46,33 @@ function App() {
     },
   ];
 
-  const articlesData=[
+  const articlesData = [
     {
-      image: 'https://demo.zytheme.com/equita/assets/images/blog/grid/1.jpg',
-      categories: 'cargo, insights',
-      title: 'Importers achieve cost savings through the First Sale rule!',
-      date: '20 jan 2025',
+      image: "https://demo.zytheme.com/equita/assets/images/blog/grid/1.jpg",
+      categories: "cargo, insights",
+      title: "Importers achieve cost savings through the First Sale rule!",
+      date: "20 jan 2025",
       description:
-        'The trade war currently ensuing between the nations around the globe, fiercely with China.',
-      link: '#',
+        "The trade war currently ensuing between the nations around the globe, fiercely with China.",
+      link: "#",
     },
     {
-      image: 'https://demo.zytheme.com/equita/assets/images/blog/grid/1.jpg',
-      categories: 'cargo, insights',
-      title: 'How freight forwarding reshapes global trade',
-      date: '22 jan 2025',
+      image: "https://demo.zytheme.com/equita/assets/images/blog/grid/1.jpg",
+      categories: "cargo, insights",
+      title: "How freight forwarding reshapes global trade",
+      date: "22 jan 2025",
       description:
-        'Global trade continues to evolve and reshape logistics operations. Here’s what’s helping businesses adapt...',
-      link: '#',
+        "Global trade continues to evolve and reshape logistics operations. Here’s what’s helping businesses adapt...",
+      link: "#",
     },
     {
-      image: 'https://demo.zytheme.com/equita/assets/images/blog/grid/1.jpg',
-      categories: 'cargo, insights',
-      title: 'Top logistics tips for import-export businesses',
-      date: '25 jan 2025',
+      image: "https://demo.zytheme.com/equita/assets/images/blog/grid/1.jpg",
+      categories: "cargo, insights",
+      title: "Top logistics tips for import-export businesses",
+      date: "25 jan 2025",
       description:
-        'Understanding the key logistics strategies helps small businesses scale their operations smartly...',
-      link: '#',
+        "Understanding the key logistics strategies helps small businesses scale their operations smartly...",
+      link: "#",
     },
   ];
   const officeLocations = [
@@ -98,7 +98,7 @@ function App() {
       phone: "(004) 01061245741",
     },
   ];
-  
+
   const navItems = [
     {
       label: "Home",
@@ -106,17 +106,19 @@ function App() {
     },
     {
       label: "Company",
-      subItems: [{
-        items: [
-          "About Us",
-          "Core Values",
-          "Leadership Team",
-          "Global Locations",
-          "Our Gallery",
-          "Awards & Recognition",
-          "Careers",
-        ],
-      }],
+      subItems: [
+        {
+          items: [
+            "About Us",
+            "Core Values",
+            "Leadership Team",
+            "Global Locations",
+            "Our Gallery",
+            "Awards & Recognition",
+            "Careers",
+          ],
+        },
+      ],
     },
     {
       label: "Services",
@@ -150,30 +152,34 @@ function App() {
     },
     {
       label: "News & Media",
-      subItems: [{
-        items: [
-          "Blog Section",
-          "Single Post",
-          "Our Offerings",
-          "Case Study Gallery",
-          "Case Study Standard View",
-          "Individual Case Study",
-        ],
-      }],
+      subItems: [
+        {
+          items: [
+            "Blog Section",
+            "Single Post",
+            "Our Offerings",
+            "Case Study Gallery",
+            "Case Study Standard View",
+            "Individual Case Study",
+          ],
+        },
+      ],
     },
     {
       label: "Features",
-      subItems: [{
-        items: [
-          "Get a Quote",
-          "Shipment Tracking",
-          "Locate Us",
-          "Support & FAQs",
-        ],
-      }],
+      subItems: [
+        {
+          items: [
+            "Get a Quote",
+            "Shipment Tracking",
+            "Locate Us",
+            "Support & FAQs",
+          ],
+        },
+      ],
     },
   ];
-  
+
   const mobileMenuItems = [
     {
       label: "Home",
@@ -181,36 +187,80 @@ function App() {
     },
     {
       label: "Company",
-      sections: [{ links: ["About Us", "Core Values", "Leadership Team", "Global Locations", "Our Gallery", "Awards & Recognition", "Careers"] }],
+      sections: [
+        {
+          links: [
+            "About Us",
+            "Core Values",
+            "Leadership Team",
+            "Global Locations",
+            "Our Gallery",
+            "Awards & Recognition",
+            "Careers",
+          ],
+        },
+      ],
     },
     {
       label: "Services",
       sections: [
         {
           title: "Transportation",
-          links: ["Warehousing", "Air Freight", "Ocean Freight", "Road Freight", "Supply Chain", "Packaging"],
+          links: [
+            "Warehousing",
+            "Air Freight",
+            "Ocean Freight",
+            "Road Freight",
+            "Supply Chain",
+            "Packaging",
+          ],
         },
         {
           title: "Industries",
-          links: ["Retail & Consumer", "Sciences & Healthcare", "Industrial & Chemical", "Power Generation", "Food & Beverage", "Oil & Gas"],
+          links: [
+            "Retail & Consumer",
+            "Sciences & Healthcare",
+            "Industrial & Chemical",
+            "Power Generation",
+            "Food & Beverage",
+            "Oil & Gas",
+          ],
         },
       ],
     },
     {
       label: "News & Blogs",
-      sections: [{
-        links: ["Our Blog", "Single Blog Post", "Our Services", "Case Studies Grid", "Case Studies Standard", "Single Case Study"],
-      }],
+      sections: [
+        {
+          links: [
+            "Our Blog",
+            "Single Blog Post",
+            "Our Services",
+            "Case Studies Grid",
+            "Case Studies Standard",
+            "Single Case Study",
+          ],
+        },
+      ],
     },
     {
       label: "Features",
-      sections: [{ links: ["Request a Quote", "Track & Trace", "Find a Location", "Help & FAQs"] }],
+      sections: [
+        {
+          links: [
+            "Request a Quote",
+            "Track & Trace",
+            "Find a Location",
+            "Help & FAQs",
+          ],
+        },
+      ],
     },
   ];
-  
+
   const languages = ["English", "Arabic"];
   const contactButton = "Request a Quote";
-  
+
   const searchIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -232,7 +282,7 @@ function App() {
   );
   return (
     <>
-       <Header
+      <Header
         logo={logo}
         logoDark={logoDark}
         navItems={navItems}
@@ -241,10 +291,10 @@ function App() {
         searchIconSVG={searchIcon}
         menuItems={mobileMenuItems}
       />
-      
+
       {/* If you ever want to use MenuItem separately */}
       {/* <MenuItem menuItems={mobileMenuItems} /> */}
-    
+
       <Hero
         cards={[
           {
@@ -421,53 +471,53 @@ function App() {
         testimonials={testimonials}
       />
 
-<RecentArticles
-      subtitle="insight and trends"
-      heading="recent articles"
-      description="Follow our latest news and thoughts which focuses exclusively on insight, industry trends, top news headlines."
-      articles={articlesData}
-    />
-       <Map offices={officeLocations} buttonText="Geo Locations" />
-       <Footer
-  logoUrl="https://demo.zytheme.com/equita/assets/images/logo/logo-light.png"
-  newsletter={{
-    description: "Sign up for industry alerts,\ninsights from Equita.",
-    placeholder: "Your Email Address",
-    buttonText: "sign up!",
-  }}
-  socials={[
-    { icon: faFacebookF, link: "#" },
-    { icon: faInstagram, link: "#" },
-    { icon: faTwitter, link: "#" },
-  ]}
-  linkGroups={[
-    {
-      title: "Services",
-      links: [
-        { label: "About us", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "News", href: "#" },
-        { label: "Contact us", href: "#" },
-      ],
-    },
-    {
-      title: "Industries",
-      links: [
-        { label: "Investment Banking", href: "#" },
-        { label: "Asset Management", href: "#" },
-        { label: "Brokerage Services", href: "#" },
-        { label: "Research Services", href: "#" },
-      ],
-    },
-  ]}
-  quickContact={{
-    message:
-      "If you have any questions or need help, feel free to contact with our team.",
-    phone: "01061245741",
-    address: "2307 Beverley Rd Brooklyn, New York 11226 United States.",
-  }}
-  copyright="© Equita, With Love by Zytheme.com"
-/>
+      <RecentArticles
+        subtitle="insight and trends"
+        heading="recent articles"
+        description="Follow our latest news and thoughts which focuses exclusively on insight, industry trends, top news headlines."
+        articles={articlesData}
+      />
+      <Map offices={officeLocations} buttonText="Geo Locations" />
+      <Footer
+        logoUrl="https://demo.zytheme.com/equita/assets/images/logo/logo-light.png"
+        newsletter={{
+          description: "Sign up for industry alerts,\ninsights from Equita.",
+          placeholder: "Your Email Address",
+          buttonText: "sign up!",
+        }}
+        socials={[
+          { icon: faFacebookF, link: "#" },
+          { icon: faInstagram, link: "#" },
+          { icon: faTwitter, link: "#" },
+        ]}
+        linkGroups={[
+          {
+            title: "Services",
+            links: [
+              { label: "About us", href: "#" },
+              { label: "Careers", href: "#" },
+              { label: "News", href: "#" },
+              { label: "Contact us", href: "#" },
+            ],
+          },
+          {
+            title: "Industries",
+            links: [
+              { label: "Investment Banking", href: "#" },
+              { label: "Asset Management", href: "#" },
+              { label: "Brokerage Services", href: "#" },
+              { label: "Research Services", href: "#" },
+            ],
+          },
+        ]}
+        quickContact={{
+          message:
+            "If you have any questions or need help, feel free to contact with our team.",
+          phone: "01061245741",
+          address: "2307 Beverley Rd Brooklyn, New York 11226 United States.",
+        }}
+        copyright="© Equita, With Love by Zytheme.com"
+      />
     </>
   );
 }

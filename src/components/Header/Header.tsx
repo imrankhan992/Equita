@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
 import { Toggle } from "./Toggle";
+import { ContactButton, LanguageDropdown, Logo, NavMenu } from "../Branding";
 
 export const Header = ({
   logo,
@@ -38,54 +39,15 @@ export const Header = ({
   return (
     <header className={`header-secion ${isScrolled ? "scrolled" : "imran"}`}>
       <nav className="nav-container container">
-        <picture className="logo-container">
-          <source media="(max-width: 64.938rem)" srcSet={logoDark} />
-          <img src={logo} alt="Logo" width={120} height={39} />
-        </picture>
-        <picture className="scroll_container">
-          <source media="(max-width: 64.938rem)" srcSet={logo} />
-          <img src={logoDark} alt="Logo" width={120} height={39} />
-        </picture>
+      <Logo src={logo} darkSrc={logoDark} alt="Logo" width={120} height={39} />
 
         <div className="menu-container">
-          <div className="navbar">
-            {navItems.map((nav, idx) => (
-              <div key={idx} className="dropdown">
-                <button className="dropbtn">{nav.label}</button>
-                {nav.subItems && (
-                  <div className="dropdown-content">
-                    {nav.subItems.length === 1 ? (
-                      nav.subItems[0].items.map((item, i) => <a key={i} href="#">{item}</a>)
-                    ) : (
-                      <div className="even-columns">
-                        {nav.subItems.map((group, gi) => (
-                          <div key={gi}>
-                            {group.title && <h2>{group.title}</h2>}
-                            {group.items.map((item, ii) => <a key={ii} href="#">{item}</a>)}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    <div className="border-dropdown-content "></div>
-                  </div>
-                )}
-              </div>
-            ))}
-            <a href="#">Contact</a>
-          </div>
+        <NavMenu navItems={navItems} />
 
           <div className="end-buttons">
             <div>{searchIconSVG}</div>
-            <button className="header-button">{contactButton}</button>
-            <div className="dropdown">
-              <button className="dropbtn">Eu</button>
-              <div className="dropdown-content">
-                {languages.map((lang, i) => (
-                  <a key={i} href="#">{lang}</a>
-                ))}
-                <div className="border-dropdown-content "></div>
-              </div>
-            </div>
+            <ContactButton label={contactButton} />
+            <LanguageDropdown languages={languages} />
           </div>
         </div>
 

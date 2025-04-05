@@ -1,5 +1,10 @@
-import React from 'react';
-import './recentArticles.css';
+import React from "react";
+import "./recentArticles.css";
+import {
+  RecentArticlesSubtitle,
+  RecentArticlesHeading,
+  RecentArticlesDescription,
+} from "../Branding";
 
 export interface Article {
   image: string;
@@ -27,9 +32,9 @@ const RecentArticles: React.FC<RecentArticlesProps> = ({
     <section className="recent-articles_section">
       <div className="container">
         <div className="recent-articles_wrapper">
-          <p className="heading-subtitle">{subtitle}</p>
-          <h2 className="heading-title">{heading}</h2>
-          <p className="heading-desc">{description}</p>
+          <RecentArticlesSubtitle subtitle={subtitle} />
+          <RecentArticlesHeading heading={heading} />
+          <RecentArticlesDescription description={description} />
         </div>
 
         {/* blogs */}
