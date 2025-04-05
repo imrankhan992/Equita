@@ -1,47 +1,54 @@
 import React from "react";
 import "./companies.css";
 import Cards from "./Cards";
-import { faPlaneUp,faShip ,faTrailer} from "@fortawesome/free-solid-svg-icons";
-const Companies = () => {
+import { faPlaneUp, faShip, faTrailer } from "@fortawesome/free-solid-svg-icons";
+
+const Companies = ({
+  subtitle,
+  title,
+  description,
+  contactInfo,
+  iconImages,
+}: {
+  subtitle: string;
+  title: string;
+  description: string;
+  contactInfo: {
+    phone: string;
+    representative: string;
+  };
+  iconImages: string[];
+}) => {
   return (
     <section className="spacing-y companies container">
       <div className="container companies__container ">
         <div>
-          <span className="company-sub-heading">
-            Safe & Reliable Cargo Solutions!
-          </span>
-          <h3 className="company_heading">
-            Managing Logistics For World’s Multinational Companies.
-          </h3>
+          <span className="company-sub-heading">{subtitle}</span>
+          <h3 className="company_heading">{title}</h3>
         </div>
         <div>
-          <p className="company_paragraph">
-            Our global logistics expertise, advanced supply chain technology &
-            customized logistics solutions will help you analyze, develop and
-            implement successful supply chain management strategies from
-            end-to-end.
-          </p>
+          <p className="company_paragraph">{description}</p>
           <div className="company__btn__container">
             <button className="company-btn">Pricing and Plans</button>
             <div className="company__contact">
               <img
                 height={55}
                 width={55}
-                src="https://demo.zytheme.com/equita/assets/images/testimonial/5.jpg"
+                src={iconImages[0]}
                 alt="profile"
               />
               <div className="company__contact__info">
-                <h3>(002) 01061245741</h3>
-                <span>Sales Representative</span>
+                <h3>{contactInfo.phone}</h3>
+                <span>{contactInfo.representative}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* cards of comapnies */}
+      {/* cards of companies */}
 
       <div className="company__cards_container ">
-        <Cards icon={faPlaneUp}/>
+        <Cards icon={faPlaneUp} />
         <Cards icon={faShip} />
         <Cards icon={faTrailer} />
       </div>
@@ -58,7 +65,7 @@ const Companies = () => {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="size-6"
+            className="size-6"
           >
             <path
               stroke-linecap="round"

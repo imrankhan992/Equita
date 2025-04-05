@@ -476,3 +476,27 @@ export const NewsletterButton = ({ label }: { label: string }) => (
     {label}
   </button>
 );
+
+// CTA
+export const Subtitle = ({ text }: { text: string }) => (
+  <p className="heading-subtitle">{text}</p>
+);
+
+export const Title = ({ text }: { text: string }) => (
+  <h2 className="heading-title_cta">{text}</h2>
+);
+
+export const FeatureIcon = ({
+  src,
+  alt,
+  caption,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+}) => (
+  <figure>
+    <img width={70} height={70} src={src} alt={alt} />
+    <figcaption className="fig_caption">{caption}</figcaption>
+  </figure>
+);

@@ -1,16 +1,54 @@
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import React, { useEffect, useRef, useState } from "react";
+import "./cta.css";
+
+import Cta_Tabs from "./CtaTabs";
 import shipping from "../../assets/images/icons/shipping.png";
 import order from "../../assets/images/icons/order.png";
 import { Input } from "./Input";
+import Companies from "../Companies/Companies";
+import { FeatureIcon, Subtitle, Title } from "../Branding";
 
-const categories = [
-  {
-    name: "Request A Quote",
-    img: order,
-    alt: "order image",
-    content: "Request a quote content here.",
-    component: (
-      <>
+const Cta = ({
+  subtitle,
+  title,
+  icons,
+}: {
+  subtitle: string;
+  title: string;
+  icons: {
+    paymentTerminal: string;
+    package: string;
+    scaleMachine: string;
+  };
+}) => {
+  const ctaRef = useRef(null);
+  const [ctaHeight, setCtaHeight] = useState(0);
+  const iconImages = [
+    "https://demo.zytheme.com/equita/assets/images/testimonial/5.jpg", // This will be used as the contact image
+  ];
+  useEffect(() => {
+    if (ctaRef.current) {
+      setCtaHeight(ctaRef.current.offsetHeight);
+    }
+
+    const handleResize = () => {
+      if (ctaRef.current) {
+        setCtaHeight(ctaRef.current.offsetHeight);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ Fix: Declare the categories array properly
+  const categories = [
+    {
+      name: "Request A Quote",
+      img: order,
+      alt: "order image",
+      content: "Request a quote content here.",
+      component: (
         <div className="request_quote-main_container">
           <div className="left_side_main">
             <div>
@@ -73,42 +111,39 @@ const categories = [
                   />
                 </div>
               </div>
-              {/* check boxes */}
-              <div>
-                <div className="checkboxes">
-                  <label className="checkbox_container">
-                    fragile
-                    <input type="radio" defaultChecked="checked" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                  <label className="checkbox_container">
-                    express delivery
-                    <input type="radio" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                  <label className="checkbox_container">
-                    insurance
-                    <input type="radio" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                  <label className="checkbox_container">
-                    packaging
-                    <input type="radio" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                </div>
+
+              <div className="checkboxes">
+                <label className="checkbox_container">
+                  fragile
+                  <input type="radio" defaultChecked name="radio" />
+                  <span className="checkmark" />
+                </label>
+                <label className="checkbox_container">
+                  express delivery
+                  <input type="radio" name="radio" />
+                  <span className="checkmark" />
+                </label>
+                <label className="checkbox_container">
+                  insurance
+                  <input type="radio" name="radio" />
+                  <span className="checkmark" />
+                </label>
+                <label className="checkbox_container">
+                  packaging
+                  <input type="radio" name="radio" />
+                  <span className="checkmark" />
+                </label>
               </div>
+
               <button className="button-black-to-red">Request A Quote</button>
             </div>
           </div>
-          {/* right side main */}
+
           <div className="right_side_main">
             <div className="career_div">
               <div className="overlay-red"></div>
               <div className="career_div_content">
-                <h2 className="sub-headings">
-                  Take your carreer to next level
-                </h2>
+                <h2 className="sub-headings">Take your career to next level</h2>
                 <p>
                   We pride ourselves on providing the best transport & shipping
                   services available all over the world and there is no one
@@ -123,33 +158,30 @@ const categories = [
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
-                      class="size-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
                       />
                     </svg>
-                  </span>{" "}
+                  </span>
                   Apply Now
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </>
-    ),
-  },
-  {
-    name: "Track & Trace",
-    img: shipping,
-    alt: "shipping image",
-    content: "Track & Trace details here.",
-    component: (
-      <>
+      ),
+    },
+    {
+      name: "Track & Trace",
+      img: shipping,
+      alt: "shipping image",
+      content: "Track & Trace details here.",
+      component: (
         <div className="request_quote-main_container">
           <div className="left_side_main">
             <div>
@@ -166,47 +198,43 @@ const categories = [
               <h2 className="sub-headings">Tracking number</h2>
               <div className="text-area">
                 <textarea
-                  placeholder="You can enter up to a maximum of  airway bill numbers for tracking"
+                  placeholder="You can enter up to a maximum of airway bill numbers for tracking"
                   className="text-area-input"
                 />
               </div>
 
-              {/* check boxes */}
-              <div>
-                <div className="checkboxes">
-                  <label className="checkbox_container">
-                    fragile
-                    <input type="radio" defaultChecked="checked" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                  <label className="checkbox_container">
-                    express delivery
-                    <input type="radio" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                  <label className="checkbox_container">
-                    insurance
-                    <input type="radio" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                  <label className="checkbox_container">
-                    packaging
-                    <input type="radio" name="radio" />
-                    <span className="checkmark" />
-                  </label>
-                </div>
+              <div className="checkboxes">
+                <label className="checkbox_container">
+                  fragile
+                  <input type="radio" defaultChecked name="radio" />
+                  <span className="checkmark" />
+                </label>
+                <label className="checkbox_container">
+                  express delivery
+                  <input type="radio" name="radio" />
+                  <span className="checkmark" />
+                </label>
+                <label className="checkbox_container">
+                  insurance
+                  <input type="radio" name="radio" />
+                  <span className="checkmark" />
+                </label>
+                <label className="checkbox_container">
+                  packaging
+                  <input type="radio" name="radio" />
+                  <span className="checkmark" />
+                </label>
               </div>
+
               <button className="button-black-to-red">Track & Trace</button>
             </div>
           </div>
-          {/* right side main */}
+
           <div className="right_side_main">
             <div className="career_div">
               <div className="overlay-red"></div>
               <div className="career_div_content">
-                <h2 className="sub-headings">
-                  Take your carreer to next level
-                </h2>
+                <h2 className="sub-headings">Take your career to next level</h2>
                 <p>
                   We pride ourselves on providing the best transport & shipping
                   services available all over the world and there is no one
@@ -221,58 +249,71 @@ const categories = [
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
-                      class="size-6"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
                       />
                     </svg>
-                  </span>{" "}
+                  </span>
                   Apply Now
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </>
-    ),
-  },
-];
+      ),
+    },
+  ];
 
-export default function Cta_Tabs() {
   return (
-    <div className="cta_tab_container container">
-      <div className="cta_tab_content ">
-        <TabGroup>
-          <TabList className="cta_tab container container">
-            {categories.map(({ alt, img, name }) => (
-              <Tab
-                key={name}
-                className={({ selected }) =>
-                  `button-tabs ${selected ? "active" : ""}`
-                }
-              >
-                <div className="tabs-button">
-                  <img height={50} width={50} src={img} alt={alt} /> {name}
-                </div>
-              </Tab>
-            ))}
-          </TabList>
+    <section className="cta__section_main_container">
+      <div ref={ctaRef} className="cta__container cta spacing-y">
+        <div className="cta__content container">
+          <div className="cta__content-left">
+          <Subtitle text={subtitle} />
+          <Title text={title} />
+          </div>
+          <div className="cta__content-right">
+          <FeatureIcon
+    src={icons.paymentTerminal}
+    alt="payment icon"
+    caption="Transparent Pricing"
+  />
+  <FeatureIcon
+    src={icons.package}
+    alt="box package icon"
+    caption="Fast, Efficient Delivery"
+  />
+  <FeatureIcon
+    src={icons.scaleMachine}
+    alt="Weighing machine"
+    caption="Warehouse Storage"
+  />
+          </div>
+        </div>
 
-          {/* Tab Panels */}
-          <TabPanels className="panel__container container">
-            {categories.map(({ name, component }) => (
-              <TabPanel key={name} className="p-4 bg-gray-200 rounded-lg">
-                {component}
-              </TabPanel>
-            ))}
-          </TabPanels>
-        </TabGroup>
+        <Cta_Tabs categories={categories} />
       </div>
-    </div>
+
+      {/* Optional: You can use ctaHeight if needed for spacing */}
+
+      <Companies
+        subtitle="Top Rated Logistics"
+        title="Trusted Transport Companies"
+        description="We collaborate with leading logistic companies that offer fast and reliable delivery options by air, sea, and land."
+        contactInfo={{
+          phone: "+1 (800) 123-4567",
+          representative: "John Doe, Support Manager",
+        }}
+        iconImages={iconImages}
+        style={{ paddingTop: `${ctaHeight}px` }}
+      />
+    </section>
   );
-}
+};
+
+export default Cta;

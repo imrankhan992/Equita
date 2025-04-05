@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Header } from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Logistic from "./components/Logistic/Logistic.tsx";
-import Cta from "./components/CTA/Cta";
+import Cta from "./components/CTA/Cta.tsx";
 import Quality from "./components/Quality/Quality.tsx";
 import Articles from "./components/Articles/Articles.tsx";
 import Plan from "./components/Plans/Plan.tsx";
@@ -15,6 +15,9 @@ import aboutus_img1 from "./assets/images/about/1.png";
 import aboutus_signature from "./assets/images/signature/1.png";
 import logo from "./assets/images/logo/logo-light.png";
 import logoDark from "./assets/images/logo/logo-dark.png";
+import paymentTerminalIcon from "./assets/images/icons/credit-card-machine.png";
+import packageIcon from "./assets/images/icons/package.png";
+import scaleMachineIcon from "./assets/images/icons/weighing-machine.png";
 import {
   faFacebookF,
   faInstagram,
@@ -292,9 +295,6 @@ function App() {
         menuItems={mobileMenuItems}
       />
 
-      {/* If you ever want to use MenuItem separately */}
-      {/* <MenuItem menuItems={mobileMenuItems} /> */}
-
       <Hero
         cards={[
           {
@@ -383,7 +383,15 @@ function App() {
         signatureImg={aboutus_signature}
       />
 
-      <Cta />
+      <Cta
+        subtitle="Dedicated Customer Teams & An Agile Services"
+        title="Global Logistics Partner To World’s Famous Brands For Over 25 Years!"
+        icons={{
+          paymentTerminal: paymentTerminalIcon,
+          package: packageIcon,
+          scaleMachine: scaleMachineIcon,
+        }}
+      />
       {/* <Companies /> */}
       <Quality
         heading="Directions, That Matter!"
