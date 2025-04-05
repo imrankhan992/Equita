@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import "./toggle.css";
-import Home from "./MenuItem"; // Your MenuItem component
+import Home from "./MenuItem";
 
-export const Toggle = () => {
+export const Toggle = ({
+  menuItems,
+}: {
+  menuItems: {
+    label: string;
+    sections: { title?: string; links: string[] }[];
+  }[];
+}) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -19,10 +26,8 @@ export const Toggle = () => {
         <span />
         <span />
       </label>
-
-      {/* Animated menu container */}
       <div className={`mobile-menu-section ${isChecked ? "open" : ""}`}>
-        <Home />
+        <Home menuItems={menuItems} />
       </div>
     </div>
   );
